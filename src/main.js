@@ -5,8 +5,8 @@ let recipesData = [];
 
 async function loadData() {
   try {
-    spiritsData = data.spirits;
-    recipesData = data.recipes;
+    spiritsData = data.spirits.sort((a, b) => a.name > b.name);
+    recipesData = data.recipes.sort((a, b) => a.name > b.name);
     renderSpirits();
     enableButtonsLogic();
   } catch (error) {
@@ -241,7 +241,7 @@ function renderRecipes(recipes) {
                 </div>
                 <div class="recipe-img">
                 <img
-                  src="/public/spirits/${recipe.name?.toLowerCase()}.png"
+                  src="/public/spirits/${recipe.name?.toLowerCase()}.jpg"
                   alt=""
                   onerror="this.onerror=null; this.src='/public/spirits/default.png';"
                 />

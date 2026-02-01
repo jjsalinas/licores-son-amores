@@ -1,19 +1,24 @@
 {
   "spirits": [
     {
-      "name": "Tanqueray",
-      "brand": "Tanqueray",
-      "type": "ginebra"
+      "name": "Absolut",
+      "brand": "Absolut",
+      "type": "vodka"
     },
     {
-      "name": "Beefeater",
-      "brand": "Beefeater",
-      "type": "ginebra"
+      "name": "Amaro Montenegro",
+      "brand": "Montenegro",
+      "type": "amaro"
     },
     {
-      "name": "Hendrick's",
-      "brand": "Hendrick's",
-      "type": "ginebra"
+      "name": "Aperitivo Select",
+      "brand": "Select",
+      "type": "aperitivo"
+    },
+    {
+      "name": "Aperol",
+      "brand": "Aperol",
+      "type": "aperitivo"
     },
     {
       "name": "Bacardí Blanco",
@@ -21,19 +26,49 @@
       "type": "ron"
     },
     {
+      "name": "Baileys",
+      "brand": "Baileys",
+      "type": "licor-crema"
+    },
+    {
+      "name": "Beefeater",
+      "brand": "Beefeater",
+      "type": "ginebra"
+    },
+    {
+      "name": "Campari",
+      "brand": "Campari",
+      "type": "aperitivo"
+    },
+    {
+      "name": "Carlos I",
+      "brand": "Carlos I",
+      "type": "brandy"
+    },
+    {
+      "name": "Cointreau",
+      "brand": "Cointreau",
+      "type": "licor-naranja"
+    },
+    {
+      "name": "Cynar",
+      "brand": "Cynar",
+      "type": "amaro"
+    },
+    {
+      "name": "Don Julio",
+      "brand": "Don Julio",
+      "type": "tequila"
+    },
+    {
       "name": "Havana Club",
       "brand": "Havana Club",
       "type": "ron"
     },
     {
-      "name": "Absolut",
-      "brand": "Absolut",
-      "type": "vodka"
-    },
-    {
-      "name": "Smirnoff",
-      "brand": "Smirnoff",
-      "type": "vodka"
+      "name": "Hendrick's",
+      "brand": "Hendrick's",
+      "type": "ginebra"
     },
     {
       "name": "Jack Daniel's",
@@ -51,12 +86,32 @@
       "type": "tequila"
     },
     {
-      "name": "Patrón",
-      "brand": "Patrón",
-      "type": "tequila"
+      "name": "Jägermeister",
+      "brand": "Jägermeister",
+      "type": "licor-hierbas"
     },
     {
-      "name": "Martini Rosso",
+      "name": "Kahlúa",
+      "brand": "Kahlúa",
+      "type": "licor-cafe"
+    },
+    {
+      "name": "Larios",
+      "brand": "Larios",
+      "type": "ginebra"
+    },
+    {
+      "name": "Licor 43",
+      "brand": "Licor 43",
+      "type": "licor-hierbas"
+    },
+    {
+      "name": "Luxardo Bitter",
+      "brand": "Luxardo",
+      "type": "aperitivo"
+    },
+    {
+      "name": "Martini Ambrato",
       "brand": "Martini",
       "type": "vermut"
     },
@@ -66,37 +121,419 @@
       "type": "vermut"
     },
     {
-      "name": "Baileys",
-      "brand": "Baileys",
-      "type": "licor-crema"
+      "name": "Martini Extra Dry",
+      "brand": "Martini",
+      "type": "vermut"
     },
     {
-      "name": "Cointreau",
-      "brand": "Cointreau",
-      "type": "licor-naranja"
+      "name": "Martini Rosso",
+      "brand": "Martini",
+      "type": "vermut"
     },
     {
-      "name": "Campari",
-      "brand": "Campari",
+      "name": "Pacharán Zoco",
+      "brand": "Zoco",
+      "type": "pacharan"
+    },
+    {
+      "name": "Patrón",
+      "brand": "Patrón",
+      "type": "tequila"
+    },
+    {
+      "name": "Puerto de Indias",
+      "brand": "Puerto de Indias",
+      "type": "ginebra"
+    },
+    {
+      "name": "Ruavieja",
+      "brand": "Ruavieja",
+      "type": "licor-hierbas"
+    },
+    {
+      "name": "Santa Teresa",
+      "brand": "Santa Teresa",
+      "type": "ron"
+    },
+    {
+      "name": "Smirnoff",
+      "brand": "Smirnoff",
+      "type": "vodka"
+    },
+    {
+      "name": "Suze",
+      "brand": "Suze",
       "type": "aperitivo"
     },
     {
-      "name": "Jägermeister",
-      "brand": "Jägermeister",
-      "type": "licor-hierbas"
+      "name": "Tanqueray",
+      "brand": "Tanqueray",
+      "type": "ginebra"
     },
     {
-      "name": "Licor 43",
-      "brand": "Licor 43",
-      "type": "licor-hierbas"
+      "name": "Vino Tinto",
+      "brand": "vino",
+      "type": "vino"
     },
     {
-      "name": "Kahlúa",
-      "brand": "Kahlúa",
-      "type": "licor-cafe"
+      "name": "Yzaguirre Blanco",
+      "brand": "Yzaguirre",
+      "type": "vermut"
+    },
+    {
+      "name": "Yzaguirre Rojo",
+      "brand": "Yzaguirre",
+      "type": "vermut"
     }
   ],
   "recipes": [
+    {
+      "name": "Americano Clásico",
+      "ingredients": [
+        {
+          "type": "vermut",
+          "name": "Vermut rosso",
+          "amount": "45 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "aperitivo",
+          "name": "Campari",
+          "amount": "45 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "soda",
+          "name": "Soda",
+          "amount": "Top",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir vermut y Campari con hielo y completar con soda. Decorar con naranja."
+    },
+    {
+      "name": "Aperol Spritz",
+      "ingredients": [
+        {
+          "type": "aperitivo",
+          "name": "Aperol",
+          "amount": "60 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "prosecco",
+          "name": "Prosecco",
+          "amount": "90 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "soda",
+          "name": "Soda",
+          "amount": "Top",
+          "isAlcohol": false
+        },
+        {
+          "type": "naranja",
+          "name": "Rodaja de naranja",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir Aperol y prosecco con hielo, completar con soda y decorar con naranja."
+    },
+    {
+      "name": "Baileys con Café",
+      "ingredients": [
+        {
+          "type": "licor-crema",
+          "name": "Baileys",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "cafe",
+          "name": "Café caliente",
+          "amount": "120 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Añadir Baileys a café caliente. Perfecto como postre líquido."
+    },
+    {
+      "name": "Bloody Mary",
+      "ingredients": [
+        {
+          "type": "vodka",
+          "name": "Vodka",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "tomate",
+          "name": "Zumo de tomate",
+          "amount": "120 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "limon",
+          "name": "Zumo de limón",
+          "amount": "10 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "salsa",
+          "name": "Salsa Worcestershire y Tabasco",
+          "amount": "Al gusto",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Mezclar todos los ingredientes con hielo y servir en vaso largo."
+    },
+    {
+      "name": "Boulevardier",
+      "ingredients": [
+        {
+          "type": "whisky",
+          "name": "Whisky bourbon",
+          "amount": "30 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "vermut",
+          "name": "Vermut rosso",
+          "amount": "30 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "aperitivo",
+          "name": "Campari",
+          "amount": "30 ml",
+          "isAlcohol": true
+        }
+      ],
+      "instructions": "Mezclar todos los ingredientes con hielo y servir en vaso bajo. Decorar con piel de naranja."
+    },
+    {
+      "name": "Brandy Alexander",
+      "ingredients": [
+        {
+          "type": "brandy",
+          "name": "Brandy",
+          "amount": "40 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "licor-cacao",
+          "name": "Licor de cacao",
+          "amount": "20 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "nata",
+          "name": "Nata líquida",
+          "amount": "30 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Agitar todos los ingredientes con hielo y servir en copa fría."
+    },
+    {
+      "name": "Carajillo",
+      "ingredients": [
+        {
+          "type": "licor-hierbas",
+          "name": "Licor 43",
+          "amount": "40 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "cafe",
+          "name": "Café expreso",
+          "amount": "30 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir Licor 43 con café expreso caliente. Se puede flamear opcionalmente."
+    },
+    {
+      "name": "Cardinale",
+      "ingredients": [
+        {
+          "type": "ginebra",
+          "name": "Ginebra",
+          "amount": "40 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "vermut",
+          "name": "Vermut seco",
+          "amount": "20 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "aperitivo",
+          "name": "Campari",
+          "amount": "10 ml",
+          "isAlcohol": true
+        }
+      ],
+      "instructions": "Mezclar con hielo y servir en copa fría. Twist de limón."
+    },
+    {
+      "name": "Cosmopolitan",
+      "ingredients": [
+        {
+          "type": "vodka",
+          "name": "Vodka",
+          "amount": "40 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "licor-naranja",
+          "name": "Cointreau",
+          "amount": "15 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "lima",
+          "name": "Zumo de lima",
+          "amount": "15 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "arandanos",
+          "name": "Zumo de arándanos",
+          "amount": "30 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Agitar vodka, Cointreau, zumo de lima y arándanos. Servir en copa de martini."
+    },
+    {
+      "name": "Cuba Libre",
+      "ingredients": [
+        {
+          "type": "ron",
+          "name": "Ron",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "coca-cola",
+          "name": "Coca-cola",
+          "amount": "120 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "lima",
+          "name": "Zumo de lima",
+          "amount": "10 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Mezclar ron con coca-cola y zumo de lima. Servir con hielo y rodaja de lima."
+    },
+    {
+      "name": "Daiquiri",
+      "ingredients": [
+        {
+          "type": "ron",
+          "name": "Ron blanco",
+          "amount": "60 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "lima",
+          "name": "Zumo de lima",
+          "amount": "30 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "jarabe",
+          "name": "Jarabe simple",
+          "amount": "15 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Agitar ron con zumo de lima y jarabe simple. Servir en copa fría."
+    },
+    {
+      "name": "Dark and Stormy",
+      "ingredients": [
+        {
+          "type": "ron",
+          "name": "Ron oscuro",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "ginger-beer",
+          "name": "Ginger beer",
+          "amount": "120 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "lima",
+          "name": "Zumo de lima",
+          "amount": "10 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir ginger beer y lima, añadir el ron flotando encima."
+    },
+    {
+      "name": "Espresso Martini",
+      "ingredients": [
+        {
+          "type": "vodka",
+          "name": "Vodka",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "licor-cafe",
+          "name": "Kahlúa",
+          "amount": "25 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "cafe",
+          "name": "Café expreso",
+          "amount": "30 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Agitar vodka, Kahlúa y café expreso recién hecho con hielo. Servir en copa de martini."
+    },
+    {
+      "name": "Gin Fizz",
+      "ingredients": [
+        {
+          "type": "ginebra",
+          "name": "Ginebra",
+          "amount": "45 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "limon",
+          "name": "Zumo de limón",
+          "amount": "30 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "jarabe",
+          "name": "Jarabe simple",
+          "amount": "10 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "soda",
+          "name": "Soda",
+          "amount": "Top",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Agitar ginebra, limón y jarabe, servir y completar con soda."
+    },
     {
       "name": "Gin Tonic",
       "ingredients": [
@@ -114,6 +551,101 @@
         }
       ],
       "instructions": "Servir la ginebra en un vaso largo con hielo, añadir la tónica y decorar con rodaja de limón o pepino."
+    },
+    {
+      "name": "Kingston Negroni",
+      "ingredients": [
+        {
+          "type": "ron",
+          "name": "Ron añejo",
+          "amount": "30 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "vermut",
+          "name": "Vermut rosso",
+          "amount": "30 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "aperitivo",
+          "name": "Campari",
+          "amount": "30 ml",
+          "isAlcohol": true
+        }
+      ],
+      "instructions": "Mezclar con hielo y servir en vaso bajo. Piel de naranja."
+    },
+    {
+      "name": "Margarita",
+      "ingredients": [
+        {
+          "type": "tequila",
+          "name": "Tequila",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "licor-naranja",
+          "name": "Cointreau",
+          "amount": "25 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "lima",
+          "name": "Zumo de lima",
+          "amount": "25 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "sal",
+          "name": "Sal",
+          "amount": "Para escarchar",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Mezclar tequila, Cointreau y zumo de lima. Servir en copa con borde escarchado de sal."
+    },
+    {
+      "name": "Martini",
+      "ingredients": [
+        {
+          "type": "ginebra",
+          "name": "Ginebra",
+          "amount": "60 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "vermut",
+          "name": "Vermut seco",
+          "amount": "10 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "aceituna",
+          "name": "Aceituna o twist de limón",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Mezclar ginebra y vermut con hielo, colar en copa fría. Decorar con aceituna o twist de limón."
+    },
+    {
+      "name": "Mi-To",
+      "ingredients": [
+        {
+          "type": "vermut",
+          "name": "Vermut rosso",
+          "amount": "45 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "aperitivo",
+          "name": "Campari",
+          "amount": "45 ml",
+          "isAlcohol": true
+        }
+      ],
+      "instructions": "Mezclar con hielo y decorar con una rodaja de naranja."
     },
     {
       "name": "Mojito",
@@ -175,66 +707,6 @@
       "instructions": "Mezclar vodka con zumo de lima y ginger beer en vaso de cobre con hielo. Decorar con lima."
     },
     {
-      "name": "Whisky Sour",
-      "ingredients": [
-        {
-          "type": "whisky",
-          "name": "Whisky",
-          "amount": "60 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "limon",
-          "name": "Zumo de limón",
-          "amount": "30 ml",
-          "isAlcohol": false
-        },
-        {
-          "type": "jarabe",
-          "name": "Jarabe simple",
-          "amount": "15 ml",
-          "isAlcohol": false
-        },
-        {
-          "type": "clara-huevo",
-          "name": "Clara de huevo",
-          "amount": "Opcional",
-          "isAlcohol": false
-        }
-      ],
-      "instructions": "Mezclar whisky con zumo de limón y jarabe simple. Agitar con hielo y servir. Opcional: clara de huevo."
-    },
-    {
-      "name": "Margarita",
-      "ingredients": [
-        {
-          "type": "tequila",
-          "name": "Tequila",
-          "amount": "50 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "licor-naranja",
-          "name": "Cointreau",
-          "amount": "25 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "lima",
-          "name": "Zumo de lima",
-          "amount": "25 ml",
-          "isAlcohol": false
-        },
-        {
-          "type": "sal",
-          "name": "Sal",
-          "amount": "Para escarchar",
-          "isAlcohol": false
-        }
-      ],
-      "instructions": "Mezclar tequila, Cointreau y zumo de lima. Servir en copa con borde escarchado de sal."
-    },
-    {
       "name": "Negroni",
       "ingredients": [
         {
@@ -264,117 +736,52 @@
       "instructions": "Mezclar partes iguales en vaso con hielo. Decorar con naranja."
     },
     {
-      "name": "Americano",
+      "name": "Negroni Sbagliato",
       "ingredients": [
         {
           "type": "vermut",
           "name": "Vermut rosso",
-          "amount": "45 ml",
+          "amount": "30 ml",
           "isAlcohol": true
         },
         {
           "type": "aperitivo",
           "name": "Campari",
-          "amount": "45 ml",
+          "amount": "30 ml",
           "isAlcohol": true
         },
         {
-          "type": "soda",
-          "name": "Soda",
+          "type": "espumoso",
+          "name": "Cava o prosecco",
           "amount": "Top",
-          "isAlcohol": false
-        },
-        {
-          "type": "naranja",
-          "name": "Rodaja de naranja",
-          "isAlcohol": false
+          "isAlcohol": true
         }
       ],
-      "instructions": "Mezclar vermut y Campari en vaso con hielo, completar con soda. Decorar con naranja."
+      "instructions": "Servir vermut y Campari con hielo y completar con cava o prosecco."
     },
     {
-      "name": "White Russian",
+      "name": "Negroni del Contadino",
       "ingredients": [
         {
-          "type": "vodka",
-          "name": "Vodka",
-          "amount": "40 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "licor-cafe",
-          "name": "Kahlúa",
-          "amount": "20 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "nata",
-          "name": "Nata fresca",
+          "type": "ginebra",
+          "name": "Ginebra",
           "amount": "30 ml",
-          "isAlcohol": false
-        }
-      ],
-      "instructions": "Mezclar vodka y Kahlúa con hielo, añadir nata fresca flotando encima."
-    },
-    {
-      "name": "Espresso Martini",
-      "ingredients": [
-        {
-          "type": "vodka",
-          "name": "Vodka",
-          "amount": "50 ml",
           "isAlcohol": true
         },
         {
-          "type": "licor-cafe",
-          "name": "Kahlúa",
-          "amount": "25 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "cafe",
-          "name": "Café expreso",
+          "type": "vermut",
+          "name": "Vermut rosso",
           "amount": "30 ml",
-          "isAlcohol": false
-        }
-      ],
-      "instructions": "Agitar vodka, Kahlúa y café expreso recién hecho con hielo. Servir en copa de martini."
-    },
-    {
-      "name": "Carajillo",
-      "ingredients": [
-        {
-          "type": "licor-hierbas",
-          "name": "Licor 43",
-          "amount": "40 ml",
           "isAlcohol": true
         },
         {
-          "type": "cafe",
-          "name": "Café expreso",
+          "type": "amaro",
+          "name": "Cynar",
           "amount": "30 ml",
-          "isAlcohol": false
-        }
-      ],
-      "instructions": "Servir Licor 43 con café expreso caliente. Se puede flamear opcionalmente."
-    },
-    {
-      "name": "Baileys con Café",
-      "ingredients": [
-        {
-          "type": "licor-crema",
-          "name": "Baileys",
-          "amount": "50 ml",
           "isAlcohol": true
-        },
-        {
-          "type": "cafe",
-          "name": "Café caliente",
-          "amount": "120 ml",
-          "isAlcohol": false
         }
       ],
-      "instructions": "Añadir Baileys a café caliente. Perfecto como postre líquido."
+      "instructions": "Mezclar todos los ingredientes con hielo. Decorar con naranja."
     },
     {
       "name": "Old Fashioned",
@@ -406,6 +813,60 @@
       "instructions": "Mezclar whisky con azúcar, angostura y una rodaja de naranja. Servir con hielo grande."
     },
     {
+      "name": "Paloma",
+      "ingredients": [
+        {
+          "type": "tequila",
+          "name": "Tequila",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "pomelo",
+          "name": "Refresco de pomelo",
+          "amount": "120 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "lima",
+          "name": "Zumo de lima",
+          "amount": "10 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "sal",
+          "name": "Sal",
+          "amount": "Para escarchar",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Escarchar el vaso con sal, añadir tequila, lima y completar con pomelo."
+    },
+    {
+      "name": "Piña Colada",
+      "ingredients": [
+        {
+          "type": "ron",
+          "name": "Ron blanco",
+          "amount": "60 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "coco",
+          "name": "Crema de coco",
+          "amount": "40 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "pina",
+          "name": "Zumo de piña",
+          "amount": "90 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Batir todos los ingredientes con hielo y servir frío."
+    },
+    {
       "name": "Tequila Sunrise",
       "ingredients": [
         {
@@ -430,17 +891,63 @@
       "instructions": "Mezclar tequila con zumo de naranja, añadir granadina lentamente para crear efecto amanecer."
     },
     {
-      "name": "Daiquiri",
+      "name": "Tinto de Verano",
       "ingredients": [
         {
-          "type": "ron",
-          "name": "Ron blanco",
+          "type": "vino",
+          "name": "Vino tinto",
+          "amount": "100 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "limon",
+          "name": "Refresco de limón",
+          "amount": "100 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir a partes iguales con hielo y una rodaja de limón."
+    },
+    {
+      "name": "Vermut Preparado",
+      "ingredients": [
+        {
+          "type": "vermut",
+          "name": "Vermut rojo",
+          "amount": "90 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "soda",
+          "name": "Soda",
+          "amount": "Top",
+          "isAlcohol": false
+        },
+        {
+          "type": "aceituna",
+          "name": "Aceituna",
+          "isAlcohol": false
+        },
+        {
+          "type": "naranja",
+          "name": "Piel de naranja",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir vermut con hielo, completar con soda y aromatizar."
+    },
+    {
+      "name": "Whisky Sour",
+      "ingredients": [
+        {
+          "type": "whisky",
+          "name": "Whisky",
           "amount": "60 ml",
           "isAlcohol": true
         },
         {
-          "type": "lima",
-          "name": "Zumo de lima",
+          "type": "limon",
+          "name": "Zumo de limón",
           "amount": "30 ml",
           "isAlcohol": false
         },
@@ -449,35 +956,42 @@
           "name": "Jarabe simple",
           "amount": "15 ml",
           "isAlcohol": false
+        },
+        {
+          "type": "clara-huevo",
+          "name": "Clara de huevo",
+          "amount": "Opcional",
+          "isAlcohol": false
         }
       ],
-      "instructions": "Agitar ron con zumo de lima y jarabe simple. Servir en copa fría."
+      "instructions": "Mezclar whisky con zumo de limón y jarabe simple. Agitar con hielo y servir. Opcional: clara de huevo."
     },
     {
-      "name": "Martini",
+      "name": "White Negroni",
       "ingredients": [
         {
           "type": "ginebra",
           "name": "Ginebra",
-          "amount": "60 ml",
+          "amount": "30 ml",
           "isAlcohol": true
         },
         {
           "type": "vermut",
-          "name": "Vermut seco",
-          "amount": "10 ml",
+          "name": "Vermut bianco",
+          "amount": "30 ml",
           "isAlcohol": true
         },
         {
-          "type": "aceituna",
-          "name": "Aceituna o twist de limón",
-          "isAlcohol": false
+          "type": "aperitivo",
+          "name": "Suze",
+          "amount": "30 ml",
+          "isAlcohol": true
         }
       ],
-      "instructions": "Mezclar ginebra y vermut con hielo, colar en copa fría. Decorar con aceituna o twist de limón."
+      "instructions": "Mezclar con hielo y servir en vaso bajo. Decorar con piel de limón."
     },
     {
-      "name": "Cosmopolitan",
+      "name": "White Russian",
       "ingredients": [
         {
           "type": "vodka",
@@ -486,49 +1000,19 @@
           "isAlcohol": true
         },
         {
-          "type": "licor-naranja",
-          "name": "Cointreau",
-          "amount": "15 ml",
+          "type": "licor-cafe",
+          "name": "Kahlúa",
+          "amount": "20 ml",
           "isAlcohol": true
         },
         {
-          "type": "lima",
-          "name": "Zumo de lima",
-          "amount": "15 ml",
-          "isAlcohol": false
-        },
-        {
-          "type": "arandanos",
-          "name": "Zumo de arándanos",
+          "type": "nata",
+          "name": "Nata fresca",
           "amount": "30 ml",
           "isAlcohol": false
         }
       ],
-      "instructions": "Agitar vodka, Cointreau, zumo de lima y arándanos. Servir en copa de martini."
-    },
-    {
-      "name": "Cuba Libre",
-      "ingredients": [
-        {
-          "type": "ron",
-          "name": "Ron",
-          "amount": "50 ml",
-          "isAlcohol": true
-        },
-        {
-          "type": "coca-cola",
-          "name": "Coca-cola",
-          "amount": "120 ml",
-          "isAlcohol": false
-        },
-        {
-          "type": "lima",
-          "name": "Zumo de lima",
-          "amount": "10 ml",
-          "isAlcohol": false
-        }
-      ],
-      "instructions": "Mezclar ron con coca-cola y zumo de lima. Servir con hielo y rodaja de lima."
+      "instructions": "Mezclar vodka y Kahlúa con hielo, añadir nata fresca flotando encima."
     }
   ]
 }
