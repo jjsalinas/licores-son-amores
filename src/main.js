@@ -3,14 +3,12 @@ import data from "./data.json";
 let spiritsData = [];
 let recipesData = [];
 
-// Cargar datos desde JSON
 async function loadData() {
-  console.log("data");
-  console.log(data);
   try {
     spiritsData = data.spirits;
     recipesData = data.recipes;
     renderSpirits();
+    enableButtonsLogic();
   } catch (error) {
     console.error("Error cargando datos:", error);
     document.getElementById("spiritsGrid").innerHTML =
@@ -32,6 +30,24 @@ function renderSpirits() {
     `,
     )
     .join("");
+}
+
+function toggleSpirit(index, forcedCheckValue) {
+  const card = document.getElementById(`spirit-${index}`);
+  const checkbox = document.getElementById(`check-${index}`);
+  checkbox.checked =
+    forcedCheckValue !== undefined ? forcedCheckValue : !checkbox.checked;
+  card.classList.toggle("selected");
+
+  // Update buttons status only on natural toggle
+  if (forcedCheckValue === undefined) {
+    updateMixButtonStatus();
+    updateMassSelectButtonsStatus();
+  }
+}
+
+function enableButtonsLogic() {
+  const grid = document.getElementById("spiritsGrid");
   // Add toggle logic to cards
   spiritsData.map((spirit, index) => {
     grid.querySelector(`#spirit-${index}`).addEventListener("click", (e) => {
@@ -44,28 +60,45 @@ function renderSpirits() {
     section[0].querySelector(".mix-button").addEventListener("click", (e) => {
       findRecipes();
     });
+    section[0].querySelector(".mix-button").disabled = true;
   }
-}
-
-function toggleSpirit(index) {
-  const card = document.getElementById(`spirit-${index}`);
-  const checkbox = document.getElementById(`check-${index}`);
-  checkbox.checked = !checkbox.checked;
-  card.classList.toggle("selected");
-
-  // Check enable/disable mix button on card toggle
-  updateMixButtonStatus();
-}
-
-function updateMixButtonStatus() {
-  const section = document.getElementsByClassName("section");
-  const selected = getSelectedSpirits();
+  // Add logic to select all / none buttons
   if (section && section.length > 0) {
-    section[0].querySelector(".mix-button").disabled = selected.length === 0;
+    section[0]
+      .querySelector("#select-all-button")
+      .addEventListener("click", (e) => {
+        selectAll();
+      });
+    section[0]
+      .querySelector("#select-none-button")
+      .addEventListener("click", (e) => {
+        selectNone();
+      });
+    updateMassSelectButtonsStatus();
   }
 }
 
-function getSelectedSpirits() {
+function updateMixButtonStatus(forcedDisabledValue) {
+  const section = document.getElementsByClassName("section");
+  const selected = getSelectedSpiritsTypes();
+  if (section && section.length > 0) {
+    section[0].querySelector(".mix-button").disabled =
+      forcedDisabledValue ?? selected.length === 0;
+  }
+}
+
+function updateMassSelectButtonsStatus() {
+  const section = document.getElementsByClassName("selection-options");
+  const selected = getSelectedSpiritsNames();
+  if (section && section.length > 0) {
+    section[0].querySelector("#select-all-button").disabled =
+      selected.length === spiritsData.length;
+    section[0].querySelector("#select-none-button").disabled =
+      selected.length === 0;
+  }
+}
+
+function getSelectedSpiritsTypes() {
   const selectedSpirits = [];
   spiritsData.forEach((spirit, index) => {
     const checkbox = document.getElementById(`check-${index}`);
@@ -76,8 +109,49 @@ function getSelectedSpirits() {
   return selectedSpirits;
 }
 
+function getSelectedSpiritsNames() {
+  const selectedSpirits = [];
+  spiritsData.forEach((spirit, index) => {
+    const checkbox = document.getElementById(`check-${index}`);
+    if (checkbox.checked) {
+      selectedSpirits.push(spirit.name);
+    }
+  });
+  return selectedSpirits;
+}
+
+function selectAll() {
+  const selectAllButton = document.getElementById("select-all-button");
+  if (selectAllButton) {
+    const selectedNames = getSelectedSpiritsNames();
+    spiritsData.forEach((spirit, index) => {
+      if (!selectedNames.includes(spirit.name)) {
+        toggleSpirit(index, true);
+      }
+    });
+  }
+  updateMixButtonStatus(false);
+  updateMassSelectButtonsStatus();
+  return;
+}
+
+function selectNone() {
+  const selectNoneButton = document.getElementById("select-none-button");
+  if (selectNoneButton) {
+    const selectedNames = getSelectedSpiritsNames();
+    spiritsData.forEach((spirit, index) => {
+      if (selectedNames.includes(spirit.name)) {
+        toggleSpirit(index, false);
+      }
+    });
+  }
+  updateMixButtonStatus(true);
+  updateMassSelectButtonsStatus();
+  return;
+}
+
 function findRecipes() {
-  const selectedSpirits = getSelectedSpirits();
+  const selectedSpirits = getSelectedSpiritsTypes();
   if (selectedSpirits.length === 0) {
     document.getElementById("recipesContainer").innerHTML =
       '<p class="no-recipes">Por favor, selecciona al menos un licor para encontrar recetas.</p>';
@@ -101,15 +175,6 @@ function findRecipes() {
   });
 }
 
-// TODO: select all/none spirits
-// function selectAll() {
-//   return;
-// }
-
-// function selectNone() {
-//   return;
-// }
-
 function renderRecipes(recipes) {
   const container = document.getElementById("recipesContainer");
 
@@ -130,6 +195,7 @@ function renderRecipes(recipes) {
 
       return `
             <div class="recipe-card">
+            <div class="recipe-content">
                 <div class="recipe-name">${recipe.name}</div>
                 <div class="non-alcohol-title">Licores:</div>
                 <div class="recipe-ingredients">
@@ -172,6 +238,14 @@ function renderRecipes(recipes) {
                 `
                     : ""
                 }
+                </div>
+                <div class="recipe-img">
+                <img
+                  src="/public/spirits/${recipe.name?.toLowerCase()}.png"
+                  alt=""
+                  onerror="this.onerror=null; this.src='/public/spirits/default.png';"
+                />
+                </div>
             </div>
         `;
     })
