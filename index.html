@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/styles.css">
+
+    <title>Licores son Amores</title>
+  </head>
+  <body>
+  <div class="container">
+      <header>
+          <h1>Licores son Amores</h1>
+          <p class="subtitle">Descubre qué cócteles puedes preparar</p>
+      </header>
+
+      <div class="section">
+          <h2>Tus Licores</h2>
+          <div class="spirits-grid" id="spiritsGrid">
+          </div>
+          <button class="mix-button" id="mix-button" disabled="true">
+              ¡A Mezclar!
+          </button>
+      </div>
+
+      <div class="section">
+          <h2>Recetas Disponibles</h2>
+          <div id="recipesContainer" class="recipes-container">
+              <p class="no-recipes">Selecciona tus licores y presiona "¡A Mezclar!" para descubrir qué cócteles puedes preparar.</p>
+          </div>
+      </div>
+      <div class="section">
+          <h2>Advertencia ⚠️</h2>
+          <div id="warningContainer">
+              <p class="warning-msg">El consumo de alcohol está prohibido a menores de 18 años 🔞</p>
+              <p class="warning-msg">No te recomiendo el consumo de alcohol en general 🚱</p>
+              <p class="warning-msg">Si vas a consumir alcohol siempre con moderación 🍷✋</p>
+          </div>
+      </div>
+  </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

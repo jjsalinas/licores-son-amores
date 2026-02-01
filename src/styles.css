@@ -1,0 +1,389 @@
+:root {
+  --cognac: #8b4513;
+  --amber: #d4a574;
+  --cream: #f5e6d3;
+  --olive: #556b2f;
+  --deep-red: #8b1538;
+  --shadow: rgba(107, 70, 40, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--cream) 0%,
+    #fff8e7 50%,
+    var(--amber) 100%
+  );
+  background-attachment: fixed;
+  color: #2c1810;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(139, 69, 19, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(213, 165, 116, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--cognac);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  text-shadow:
+    2px 2px 0 var(--amber),
+    4px 4px 0 var(--cream);
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: var(--olive);
+  font-style: italic;
+  animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 40px var(--shadow);
+  border: 2px solid rgba(139, 69, 19, 0.1);
+  animation: slideUp 0.6s ease-out backwards;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.section:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--deep-red);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--amber);
+  padding-bottom: 0.5rem;
+}
+
+.spirits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.spirit-card {
+  background: linear-gradient(135deg, #fff 0%, var(--cream) 100%);
+  border: 2px solid var(--amber);
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.spirit-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.spirit-card:hover::before {
+  opacity: 1;
+}
+
+.spirit-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px var(--shadow);
+  border-color: var(--cognac);
+}
+
+.spirit-card.selected {
+  background: linear-gradient(135deg, var(--cognac) 0%, var(--deep-red) 100%);
+  color: white;
+  border-color: var(--cognac);
+  transform: scale(1.05);
+}
+
+.spirit-card input[type="checkbox"] {
+  display: none;
+}
+
+.spirit-name {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.spirit-brand {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.spirit-type {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 0.3rem;
+  opacity: 0.7;
+}
+
+.mix-button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.2rem 3rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--deep-red) 0%, var(--cognac) 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mix-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(139, 21, 56, 0.5);
+}
+
+.mix-button:active {
+  transform: translateY(-1px);
+}
+
+.mix-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.recipes-container {
+  min-height: 200px;
+}
+
+.recipe-card {
+  background: linear-gradient(135deg, #fff 0%, #fff8f0 100%);
+  border-left: 5px solid var(--deep-red);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: recipeAppear 0.5s ease-out backwards;
+}
+
+.recipe-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.recipe-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.recipe-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.recipe-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.recipe-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes recipeAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.recipe-name {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--deep-red);
+  margin-bottom: 0.8rem;
+}
+
+.recipe-ingredients {
+  margin-bottom: 1rem;
+}
+
+.ingredient {
+  padding: 0.4rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px dashed rgba(139, 69, 19, 0.2);
+}
+
+.ingredient:last-child {
+  border-bottom: none;
+}
+
+.alcohol-ingredient {
+  font-weight: 600;
+}
+
+.non-alcohol-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid rgba(139, 69, 19, 0.15);
+}
+
+.non-alcohol-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.1rem;
+  color: var(--olive);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.non-alcohol-ingredient {
+  font-weight: 400;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+.ingredient-amount {
+  color: var(--cognac);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.recipe-instructions {
+  background: rgba(212, 165, 116, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.no-recipes {
+  text-align: center;
+  padding: 3rem;
+  color: var(--olive);
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--cognac);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .spirits-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+.warning-msg {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.1rem;
+  color: var(--olive);
+}
