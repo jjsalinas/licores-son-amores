@@ -101,6 +101,15 @@ function findRecipes() {
   });
 }
 
+// TODO: select all/none spirits
+// function selectAll() {
+//   return;
+// }
+
+// function selectNone() {
+//   return;
+// }
+
 function renderRecipes(recipes) {
   const container = document.getElementById("recipesContainer");
 
@@ -122,6 +131,7 @@ function renderRecipes(recipes) {
       return `
             <div class="recipe-card">
                 <div class="recipe-name">${recipe.name}</div>
+                <div class="non-alcohol-title">Licores:</div>
                 <div class="recipe-ingredients">
                     ${alcoholIngredients
                       .map(

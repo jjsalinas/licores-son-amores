@@ -382,6 +382,42 @@ h2 {
   }
 }
 
+.selection-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .selection-button {
+    width: 120px;
+    padding: 0.2rem 0.3rem;
+    font-family: "Fredoka", sans-serif;
+    font-size: 0.5rem;
+    background: linear-gradient(135deg, var(--deep-red) 0%, var(--cognac) 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(139, 21, 56, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .selection-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(139, 21, 56, 0.5);
+  }
+
+  .selection-button:active {
+    transform: translateY(-1px);
+  }
+
+  .selection-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
 .warning-msg {
   font-family: "Fredoka", sans-serif;
   font-size: 1.1rem;
