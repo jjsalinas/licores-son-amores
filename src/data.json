@@ -1013,6 +1013,182 @@
         }
       ],
       "instructions": "Mezclar vodka y Kahlúa con hielo, añadir nata fresca flotando encima."
+    },
+    {
+      "name": "Spritz Select",
+      "ingredients": [
+        {
+          "type": "aperitivo",
+          "name": "Aperitivo Select",
+          "amount": "60 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "espumoso",
+          "name": "Prosecco o cava",
+          "amount": "90 ml",
+          "isAlcohol": true
+        },
+        { "type": "soda", "name": "Soda", "amount": "Top", "isAlcohol": false }
+      ],
+      "instructions": "Servir con hielo, añadir Select, prosecco y completar con soda. Decorar con aceituna verde."
+    },
+    {
+      "name": "Montenegro Tonic",
+      "ingredients": [
+        {
+          "type": "amaro",
+          "name": "Amaro Montenegro",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "tonica",
+          "name": "Tónica",
+          "amount": "120 ml",
+          "isAlcohol": false
+        },
+        { "type": "naranja", "name": "Piel de naranja", "isAlcohol": false }
+      ],
+      "instructions": "Servir Montenegro con hielo, completar con tónica y aromatizar con naranja."
+    },
+    {
+      "name": "Amaro Sour",
+      "ingredients": [
+        {
+          "type": "amaro",
+          "name": "Amaro Montenegro",
+          "amount": "60 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "limon",
+          "name": "Zumo de limón",
+          "amount": "25 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "jarabe",
+          "name": "Jarabe simple",
+          "amount": "15 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "clara-huevo",
+          "name": "Clara de huevo",
+          "amount": "Opcional",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Agitar todo en seco y después con hielo. Servir colado."
+    },
+    {
+      "name": "Garibaldi",
+      "ingredients": [
+        {
+          "type": "aperitivo",
+          "name": "Campari",
+          "amount": "45 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "naranja",
+          "name": "Zumo de naranja natural",
+          "amount": "90 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir Campari con hielo y completar con zumo de naranja."
+    },
+    {
+      "name": "Brandy con Cola",
+      "ingredients": [
+        {
+          "type": "brandy",
+          "name": "Carlos I",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "coca-cola",
+          "name": "Coca-cola",
+          "amount": "120 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir el brandy con hielo y completar con cola."
+    },
+    {
+      "name": "Rebujito",
+      "ingredients": [
+        {
+          "type": "vino",
+          "name": "Vino fino o manzanilla",
+          "amount": "90 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "limon",
+          "name": "Refresco de limón",
+          "amount": "90 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir muy frío con hielo y hierbabuena."
+    },
+    {
+      "name": "Calimocho",
+      "ingredients": [
+        {
+          "type": "vino",
+          "name": "Vino tinto",
+          "amount": "100 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "coca-cola",
+          "name": "Coca-cola",
+          "amount": "100 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir a partes iguales con hielo."
+    },
+    {
+      "name": "Jäger Bomb",
+      "ingredients": [
+        {
+          "type": "licor-hierbas",
+          "name": "Jägermeister",
+          "amount": "40 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "energy",
+          "name": "Bebida energética",
+          "amount": "120 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir la bebida energética y añadir el Jägermeister."
+    },
+    {
+      "name": "Licor 43 con Leche",
+      "ingredients": [
+        {
+          "type": "licor-hierbas",
+          "name": "Licor 43",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "leche",
+          "name": "Leche fría",
+          "amount": "100 ml",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir muy frío con hielo."
     }
   ]
 }
