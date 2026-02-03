@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: node:24-alpine
+      image: node:24-bookworm-slim
 
     steps:
       - name: Checkout
