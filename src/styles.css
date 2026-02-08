@@ -51,12 +51,24 @@ body::before {
   z-index: 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem;
-  position: relative;
-  z-index: 1;
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 901px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 header {
@@ -431,7 +443,7 @@ h2 {
   }
 
   .spirits-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .section {
