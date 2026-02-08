@@ -281,7 +281,7 @@ h2 {
   }
 
   .recipe-image {
-    width: 60%;
+    width: 100%;
     display: block;
     border-radius: 1rem;
   }
@@ -431,7 +431,7 @@ h2 {
   }
 
   .spirits-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 
   .section {
