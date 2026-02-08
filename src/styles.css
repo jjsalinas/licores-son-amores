@@ -272,20 +272,18 @@ h2 {
   .recipe-content {
     width: 100%;
   }
-  .recipe-img {
+  .recipe-image-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    min-width: 30%;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
-  .recipe-img img {
-    width: 50%;
-    height: 100%;
-    object-fit: contain;
+  .recipe-image {
+    width: 60%;
     display: block;
+    border-radius: 1rem;
   }
 }
 
@@ -306,18 +304,19 @@ h2 {
   .recipe-content {
     width: 70%;
   }
-  .recipe-img {
-    width: 30%;
-    min-width: 30%;
-    max-width: 30%;
-    margin-left: 0.5rem;
+  .recipe-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
   }
 
-  .recipe-img img {
+  .recipe-image {
+    margin-left: 1rem;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
     display: block;
+    border-radius: 1rem;
   }
 }
 

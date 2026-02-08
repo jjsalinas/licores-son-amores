@@ -239,8 +239,9 @@ function renderRecipes(recipes) {
                     : ""
                 }
                 </div>
-                <div class="recipe-img">
+                <div class="recipe-image-wrapper">
                 <img
+                  class="recipe-image"
                   src="/spirits/${recipe.name?.toLowerCase()}.jpg"
                   alt=""
                   onerror="this.onerror=null; this.src='/spirits/default.png';"
