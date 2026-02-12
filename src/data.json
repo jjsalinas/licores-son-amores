@@ -11,6 +11,11 @@
       "type": "amaro"
     },
     {
+      "name": "Anís del Mono",
+      "brand": "Anís del Mono",
+      "type": "anis"
+    },
+    {
       "name": "Aperitivo Select",
       "brand": "Select",
       "type": "aperitivo"
@@ -59,6 +64,11 @@
       "name": "Don Julio",
       "brand": "Don Julio",
       "type": "tequila"
+    },
+    {
+      "name": "Freixenet",
+      "brand": "Freixenet",
+      "type": "espumoso"
     },
     {
       "name": "Havana Club",
@@ -131,6 +141,11 @@
       "type": "vermut"
     },
     {
+      "name": "Mozart Dark",
+      "brand": "Mozart",
+      "type": "licor-cacao"
+    },
+    {
       "name": "Patrón",
       "brand": "Patrón",
       "type": "tequila"
@@ -144,11 +159,6 @@
       "name": "Ruavieja",
       "brand": "Ruavieja",
       "type": "licor-hierbas"
-    },
-    {
-      "name": "Santa Teresa",
-      "brand": "Santa Teresa",
-      "type": "ron"
     },
     {
       "name": "Smirnoff",
@@ -169,16 +179,6 @@
       "name": "Vino Tinto",
       "brand": "vino",
       "type": "vino"
-    },
-    {
-      "name": "Yzaguirre Blanco",
-      "brand": "Yzaguirre",
-      "type": "vermut"
-    },
-    {
-      "name": "Yzaguirre Rojo",
-      "brand": "Yzaguirre",
-      "type": "vermut"
     }
   ],
   "recipes": [
@@ -205,6 +205,36 @@
         }
       ],
       "instructions": "Servir vermut y Campari con hielo y completar con soda. Decorar con naranja."
+    },
+    {
+      "name": "Anis del Mono Sunrise",
+      "ingredients": [
+        {
+          "type": "anis",
+          "name": "Anís del Mono",
+          "amount": "50 ml",
+          "isAlcohol": true
+        },
+        {
+          "type": "naranja",
+          "name": "Zumo de naranja",
+          "amount": "200 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "granadina",
+          "name": "Granadina",
+          "amount": "15 ml",
+          "isAlcohol": false
+        },
+        {
+          "type": "agua-azahar",
+          "name": "Agua de azahar",
+          "amount": "Pulverizar",
+          "isAlcohol": false
+        }
+      ],
+      "instructions": "Servir anís y zumo de naranja con hielo, añadir granadina lentamente para efecto sunrise, pulverizar agua de azahar y decorar con abanico de manzana."
     },
     {
       "name": "Aperol Spritz",
@@ -1014,7 +1044,7 @@
       "ingredients": [
         {
           "type": "aperitivo",
-          "name": "Aperitivo Select",
+          "name": "Aperol",
           "amount": "60 ml",
           "isAlcohol": true
         },
