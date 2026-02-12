@@ -117,6 +117,31 @@ h1 {
   }
 }
 
+#show-all-recipes-button {
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: 0.8rem;
+  background: linear-gradient(135deg, var(--deep-red) 0%, var(--cognac) 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(139, 21, 56, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 85%;
+}
+#show-all-recipes-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(139, 21, 56, 0.5);
+}
+
+#show-all-recipes-button:active {
+  transform: translateY(-1px);
+}
+
 .section {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);

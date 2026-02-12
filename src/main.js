@@ -47,6 +47,17 @@ function toggleSpirit(index, forcedCheckValue) {
 }
 
 function enableButtonsLogic() {
+  // Add logic to directly show all cocktails button
+  const allRecipesButton = document.getElementById("show-all-recipes-button");
+  console.log("allRecipesButton", allRecipesButton);
+  if (allRecipesButton) {
+    allRecipesButton.disabled = false;
+    allRecipesButton.addEventListener("click", (e) => {
+      selectAll();
+      findRecipes();
+    });
+  }
+
   const grid = document.getElementById("spiritsGrid");
   // Add toggle logic to cards
   spiritsData.map((spirit, index) => {
@@ -62,6 +73,7 @@ function enableButtonsLogic() {
     });
     section[0].querySelector(".mix-button").disabled = true;
   }
+
   // Add logic to select all / none buttons
   if (section && section.length > 0) {
     section[0]
