@@ -6,10 +6,12 @@ Eliges las tarjetas. Se pulsa el botón grande.
 
 Obtienes una lista de cocktails que pueden hacerse con esos licores.
 
-## Stack 
+## Stack
+
 vite con vanilla javascript.
 
 Ejecútalo en local:
+
 ```bash
 npm run dev
 ```

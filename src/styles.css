@@ -73,21 +73,15 @@ body::before {
 
 header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 
-h1 {
-  font-family: "Fredoka", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 700;
-  color: var(--deep-red);
+.header-image {
+  border-radius: 1rem;
+  max-width: 768px;
+  margin: 0;
   margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
-  text-shadow:
-    2px 2px 0 var(--amber),
-    4px 4px 0 var(--cream);
-  animation: fadeInDown 0.8s ease-out;
 }
 
 .subtitle {
@@ -95,6 +89,7 @@ h1 {
   color: var(--olive);
   font-style: italic;
   animation: fadeIn 1s ease-out 0.3s backwards;
+  margin-bottom: 0.5rem;
 }
 
 @keyframes fadeInDown {
@@ -463,8 +458,8 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+  .header-image {
+    max-width: 100%;
   }
 
   .spirits-grid {
